@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+html, body {
+    color: #667;
+    width: 100vw;
+    /* overflow-x: hidden; */
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 4rem;
+    background-color: #24292e;
+    padding: 1rem 2rem;
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+header #logo {
+    margin-right: 1rem;
+}
+
+header #logo svg:hover {
+    fill: #ccc;
+}
+
+header .searchbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 97%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: .7rem;
+    width: 17rem;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+header  input:focus {
+    border: 1px solid dodgerblue;
+    background: #fff;
+    width: 25rem;
+}
+
+header .searchbox > svg {
+    position: relative;
+    right: 1.8rem;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-right: 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header ul li a:hover {
+    color: #ccc;
+}
+
+header .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+    width: 7rem;
+}
+
+header .cta .new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1.8rem;
+}
+
+header .cta .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 2.2rem;
+}
+
+header .cta .profile .dp {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+header svg {
+    cursor: pointer;
+} 
+
+header svg:hover {
+    fill: #ccc;
+}
+
+
+/* MAIN */
+main {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: .28fr .72fr;
+    grid-template-rows: 10vh 100 7rem;
+    background-color: #fff;
+}
+
+
+/* TOP */
+main .top {
+    display: flex;
+    align-items: center;
+    padding: 1.7rem 23.8rem 0;
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: -1rem;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+main .top .nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+main .top .nav-item:hover:not(:nth-child(2)) {
+    border-bottom: 2px solid #ccc;
+}
+
+main .top .nav-item svg {
+    margin-right: 10px;
+}
+
+main .top .nav-item .no {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    height: 1.2rem;
+    width: 2rem;
+    background-color: #ddd;
+    font-size: .77rem;
+    border-radius: 50px;
+    font-weight: normal;
+}
+
+main .top .nav-item:nth-child(2) {
+    border-bottom: 2px solid tomato;
+    font-weight: 550;
+    font-size: .77em;
+}
+
+
+/* ASIDE */
+main aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 0 1rem 0 4rem;
+    position: relative;
+}
+
+
+main aside .dp {
+    display: flex;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: -2.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+main aside .status {
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+    width: 2.2rem;
+    height: 2.2rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    top: 10.2rem;
+    left: 18.5rem;
+    font-size: .75rem;
+    z-index: 1002;
+}
+
+main aside .status img {
+    margin-right: 7px;
+}
+
+main aside .status:hover {
+    width: 8.5rem;
+    border-radius: 50px;
+    padding-right: 7px;
+}
+
+main aside .name .username {
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0rem;
+}
+
+main aside .ff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #fafbfc;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: .82rem;
+    font-weight: bold;
+    margin: 1.3rem 0;
+    cursor: pointer;
+    position: sticky;
+    top: 1.5rem;
+    z-index: 1001;
+}
+
+main aside .ff:hover {
+    background-color: rgb(245, 241, 241);
+}
+
+main aside p {
+    font-size: .97rem;
+    margin-bottom: 1.3rem;
+}
+
+main aside .ffinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    width: 100%;
+}
+
+main aside .ffinfo > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+main aside .ffinfo > div span {
+    font-weight: bold;
+    margin: 0 0.4rem 0;
+}
+
+main aside .ffinfo > div:hover {
+    color: dodgerblue;
+    fill: dodgerblue;
+}
+
+main aside .details {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0 1rem;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+main aside .details svg {
+    margin-right: .4rem;
+}
+
+main aside .details > div {
+    display: flex;
+    align-items: center;
+}
+main aside .details > div:not(.website) {
+    margin-bottom: .4rem;
+}
+
+main aside .details span {
+    font-size: .9rem;
+}
+
+main aside .details .link span:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main aside .achievements {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+main aside .achievements h4 {
+    margin-bottom: 1rem;
+}
+
+main aside > a {
+    display: flex;
+    color: #000;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+main aside > a:hover {
+    color: dodgerblue;
+}
+
+/* BODY */
+main #body {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+    height: 100%;
+}
+
+main #body .find {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
+}
+
+main #body .find input {
+    width: 70%;
+    height: 2rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding-left: .8rem;
+    margin-right: 1rem;
+}
+
+main #body .find input:focus {
+    border: 3px solid rgb(188, 218, 248);
+}
+
+main #body .find .btn {
+    display: flex;
+}
+
+main #body .find button {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border: 1px solid #ccc;;
+    border-radius: 7px;
+    background-color: #fafbfc;
+    cursor: pointer;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+main #body .find button > span {
+    margin-left: 5px;
+}
+
+main #body .find button:not(.sort) {
+    margin-right: .5rem;
+}
+
+main #body .find button:hover {
+    background-color: #eee;
+}
+
+main #body .repository {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    border-bottom: 1px solid #ccc;
+}
+
+main #body .repository .info {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20rem;
+}
+
+main #body .repository .info a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #06d;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+
+main #body .repository .info a:hover {
+    text-decoration: underline 2px solid;
+}
+
+main #body .repository .info p {
+    margin-bottom: .65rem;
+    font-size: .9rem;
+}
+
+main #body .repository .info .details {
+    display: flex;
+    align-items: center;
+    font-size: .75rem;
+}
+
+main #body .repository .info .details .tool > div {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: .2rem;
+}
+
+main #body .repository .info .details .tool .javascript {
+    background-color: khaki;
+}
+main #body .repository .info .details .tool .typescript {
+    background-color: teal;
+}
+
+main #body .repository .info .details .tool .css {
+    background-color: darkslateblue;
+}
+
+main #body .repository .info .details .tool .html {
+    background-color: chocolate;
+}
+
+main #body .repository .info .details .tool .vue {
+    background-color: #345;
+}
+
+main #body .repository .info .details > div {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+main #body .repository .info .details > div svg {
+    margin-right: .2rem;
+}
+
+main #body .repository .info .details > p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    font-size: .75rem;
+}
+
+main #body .repository .info .details #star:hover, main #body .repository .info .details #network:hover {
+    color: dodgerblue;
+    fill: dodgerblue;
+    cursor: pointer;
+}
+
+main #body .repository .star {
+    display: flex;
+    justify-content: flex-end;
+    height: 50%;
+}
+
+main #body .repository .star button {
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem;
+    height: 45%;
+    font-weight: bold;
+    border: 1px solid #ccc;;
+    border-radius: 7px;
+    background-color: #fafbfc;
+    cursor: pointer;
+}
+
+main #body .repository .star button svg {
+    margin-right: 5px;
+}
+
+main #body .repository .star button:hover {
+    background-color: #eee;
+}
+
+main #body .prnxt {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    height: 6rem;
+}
+
+main #body .prnxt button {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: 0 1rem;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+main #body .prnxt .previous {
+    color: rgb(144, 196, 248);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+main #body .prnxt .next {
+    color: dodgerblue;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+
+main #body .prnxt .next:hover {
+    color: #fff;
+    background-color: dodgerblue;
+}
+
+/* FOOTER */
+main footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-top: 1px solid #ccc;
+    font-size: .75rem;
+}  
+
+main footer > div {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+main footer > div a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+main footer > div a:hover {
+    text-decoration: underline;
+}
+
+main footer > a svg:hover {
+    fill: rgb(100, 98, 98);
+}
+
+
+@media screen and (max-width: 1166px){
+    /* MAIN */
+    /* main {
+
+    } */
+
+    main #body .find {
+        display: block;
+    }
+
+    main #body .find input {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    /*  HEADER */
+    
+    header .menu-toggle {
+        display: block;
+    }
+
+    header #logo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0rem;
+    }
+
+    header .searchbox {
+        display: none;
+    }
+    
+    header ul {
+        display: none;
+    }
+
+    header .cta {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    header .cta .new {
+        display: none;
+    }
+    
+    header .cta .profile {
+        display: none;
+    }
+
+    /* MAIN */
+    main {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40vh 4rem 1000 7rem;
+        background-color: #fff;
+        position: relative;
+    }
+
+    main aside {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 1rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    main aside .dp {
+        display: flex;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1001;
+        margin-top: 2.7rem;
+    }
+    
+    main aside .status {
+        display: flex;
+        align-items: center;
+        width: 8.5rem;
+        height: 2.2rem;
+        font-size: .75rem;
+        position: initial;
+        border: none;
+    }
+    
+    main aside .name {
+        position: absolute;
+        top: 3rem;
+        left: 10rem;
+    }
+
+    main aside .ff {
+        position: initial;
+    }
+
+    main aside .ffinfo {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    
+    /* TOP */
+    main .top {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: center;
+        padding: 0 .5rem;
+        width: 100vw;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 1000;
+        overflow-x: scroll;
+    }
+
+    main .top svg {
+        display: none;
+    }
+
+
+    /* BODY */
+    main #body {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        padding: 0 1rem;
+        width: 100vw;
+    }
+    
+    main #body .find {
+        display: block;
+    }
+    
+    main #body .find input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    main #body .repository {
+        height: 11rem;
+        width: 100vw;
+    }
+
+    main #body .repository .info {
+        width: 70%;
+        padding-right: 0rem;
+    }
+
+    main #body .repository .star {
+        justify-content: flex-start;
+        width: 25%;
+    }
+
+    /* FOOTER */
+    main footer {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    main footer > div {
+        width: 50%;
+    }
+
+    main footer > div:first-child {
+        margin-bottom: 1rem;
+    }
+    
+    main footer > a  {
+        display: none;
+    }
+}
+
