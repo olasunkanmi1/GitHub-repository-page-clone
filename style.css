@@ -587,10 +587,13 @@ main footer > a svg:hover {
 
 
 @media screen and (max-width: 1166px){
+    header {
+        width: 100%;
+    }
     /* MAIN */
-    /* main {
-
-    } */
+    main { 
+        width: 100vw;
+    }
 
     main #body .find {
         display: block;
